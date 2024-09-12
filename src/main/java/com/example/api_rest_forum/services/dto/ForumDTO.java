@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Forum {
+public class ForumDTO {
 
     private Long id;
 

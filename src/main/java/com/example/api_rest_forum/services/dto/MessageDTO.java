@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class Message {
+public class MessageDTO {
 
     private Long id;
     private String content;

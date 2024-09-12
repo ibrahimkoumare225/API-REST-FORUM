@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 
-public class Sujet {
+public class SujetDTO {
 
     private Long id;
     String title;

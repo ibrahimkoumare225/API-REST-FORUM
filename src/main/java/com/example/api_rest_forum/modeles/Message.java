@@ -13,7 +13,6 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
-    private String user;
     @Temporal(TemporalType.DATE)
     private Date createdDate;
 
