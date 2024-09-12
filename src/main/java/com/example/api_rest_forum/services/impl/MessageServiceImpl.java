@@ -25,7 +25,7 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
-    public List<MessageDTO> findAll(MessageDTO messageDTO) {
+    public List<MessageDTO> findAll() {
         return messageRepository.findAll().stream().map(message -> {
             return messageMapper.toDto(message);
         }).toList();
