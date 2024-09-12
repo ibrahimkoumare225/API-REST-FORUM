@@ -27,6 +27,7 @@
         <url/>
     </scm>
     <properties>
+        <org.mapstruct.version>1.6.0</org.mapstruct.version>
         <java.version>17</java.version>
     </properties>
     <dependencies>

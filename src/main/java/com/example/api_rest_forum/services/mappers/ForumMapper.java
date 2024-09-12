@@ -1,4 +1,4 @@
-package com.example.api_rest_forum.services.impl;
+package com.example.api_rest_forum.services.mappers;
 
 import com.example.api_rest_forum.modeles.Forum;
 import com.example.api_rest_forum.services.dto.ForumDTO;

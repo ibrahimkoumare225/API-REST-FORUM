@@ -1,4 +1,4 @@
-package com.example.api_rest_forum.services.impl;
+package com.example.api_rest_forum.services.mappers;
 
 import com.example.api_rest_forum.modeles.Message;
 import com.example.api_rest_forum.services.dto.MessageDTO;
