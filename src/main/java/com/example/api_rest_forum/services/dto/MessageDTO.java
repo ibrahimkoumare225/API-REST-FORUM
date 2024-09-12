@@ -12,7 +12,6 @@ public class MessageDTO {
 
     private Long id;
     private String content;
-    private String user;
     private Date createdDate;
     private Sujet sujet;
 }
