@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
@@ -26,8 +27,8 @@ public class Forum implements Serializable {
     private String description;
 
     @Temporal(TemporalType.DATE)
-    private Date createdDate;
+    private Instant createdDate;
 
-    @OneToMany
+    @OneToMany(mappedBy = "forum")
     private List<Sujet> sujets;
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 
 @Data
@@ -22,7 +23,7 @@ public class Message implements Serializable {
     private String content;
 
     @Temporal(TemporalType.DATE)
-    private Date createdDate;
+    private Instant createdDate;
 
     @ManyToOne
     @JoinColumn(name = "sujet_id")

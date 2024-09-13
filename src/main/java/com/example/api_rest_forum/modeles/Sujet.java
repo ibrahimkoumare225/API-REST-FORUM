@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 import java.util.List;
 
 @Data
@@ -22,12 +22,13 @@ public class Sujet implements Serializable {
     @Column(nullable = false)
     private String title;
 
-    private Date createdDate;
+    @Temporal(TemporalType.DATE)
+    private Instant createdDate;
 
     @Column(unique = true)
     private String slug;
 
-    @OneToMany
+    @OneToMany(mappedBy = "sujet")
     private List<Message> messages;
 
     @ManyToOne
