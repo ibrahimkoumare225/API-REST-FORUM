@@ -32,7 +32,10 @@ public class ForumServiceImpl implements ForumService{
 
     @Override
     public List<ForumDTO> findAll() {
+<<<<<<< HEAD
         log.debug("Finding all forum");
+=======
+>>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
         return forumRepository.findAll().stream().map(forum -> {
             return forumMapper.toDto(forum);
         }).toList();

@@ -1,5 +1,99 @@
+<<<<<<< HEAD
 2024-09-13T01:54:48.647+01:00  WARN 50676 --- [API REST FORUM] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30s401ms932µs600ns).
 2024-09-13T08:12:01.974+01:00  WARN 50676 --- [API REST FORUM] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h17m24s280ms888µs).
 2024-09-13T09:37:35.167+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-09-13T09:37:35.209+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-09-13T09:37:35.219+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+=======
+2024-09-12T17:05:47.543+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Starting ApiRestForumApplication using Java 17.0.8 with PID 20440 (C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM)
+2024-09-12T17:05:47.549+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T17:05:47.629+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-12T17:05:47.634+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-12T17:05:48.958+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-12T17:05:49.195+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219 ms. Found 3 JPA repository interfaces.
+2024-09-12T17:05:50.737+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T17:05:50.773+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T17:05:50.773+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T17:05:50.898+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T17:05:50.898+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3264 ms
+2024-09-12T17:05:51.428+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-12T17:05:51.659+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-12T17:05:51.875+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-12T17:05:52.556+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-12T17:05:52.605+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-12T17:05:53.152+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29082cc4
+2024-09-12T17:05:53.156+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-12T17:05:55.209+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-12T17:05:55.344+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:05:55.922+01:00  WARN 20440 --- [API REST FORUM] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12T17:05:56.579+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-12T17:05:56.649+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T17:05:56.664+01:00  INFO 20440 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Started ApiRestForumApplication in 9.852 seconds (process running for 11.263)
+2024-09-12T17:17:34.693+01:00  INFO 20440 --- [API REST FORUM] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T17:17:34.696+01:00  INFO 20440 --- [API REST FORUM] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T17:17:34.700+01:00  INFO 20440 --- [API REST FORUM] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-12T17:32:25.263+01:00  INFO 20440 --- [API REST FORUM] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:32:25.268+01:00  INFO 20440 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-12T17:32:25.282+01:00  INFO 20440 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-12T17:32:38.894+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Starting ApiRestForumApplication using Java 17.0.8 with PID 32232 (C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM)
+2024-09-12T17:32:38.898+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T17:32:38.971+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-12T17:32:38.972+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-12T17:32:40.441+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-12T17:32:40.563+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 3 JPA repository interfaces.
+2024-09-12T17:32:42.286+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T17:32:42.307+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T17:32:42.307+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T17:32:42.398+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T17:32:42.398+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3426 ms
+2024-09-12T17:32:42.706+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-12T17:32:42.821+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-12T17:32:42.891+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-12T17:32:43.570+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-12T17:32:43.681+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-12T17:32:44.274+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29ab8bdb
+2024-09-12T17:32:44.277+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-12T17:32:46.235+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-12T17:32:47.488+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:32:48.323+01:00  WARN 32232 --- [API REST FORUM] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12T17:32:49.347+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-12T17:32:49.474+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T17:32:49.509+01:00  INFO 32232 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Started ApiRestForumApplication in 11.348 seconds (process running for 12.589)
+2024-09-12T17:33:34.882+01:00  INFO 32232 --- [API REST FORUM] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T17:33:34.882+01:00  INFO 32232 --- [API REST FORUM] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T17:33:34.885+01:00  INFO 32232 --- [API REST FORUM] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-12T17:33:34.927+01:00  WARN 32232 --- [API REST FORUM] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-09-12T17:39:56.163+01:00  INFO 32232 --- [API REST FORUM] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:39:56.169+01:00  INFO 32232 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-12T17:39:56.187+01:00  INFO 32232 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-12T17:40:37.954+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Starting ApiRestForumApplication using Java 17.0.8 with PID 47720 (C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\API-REST-FORUM)
+2024-09-12T17:40:37.960+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T17:40:38.055+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-12T17:40:38.056+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-12T17:40:39.346+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-12T17:40:39.538+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 3 JPA repository interfaces.
+2024-09-12T17:40:40.841+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T17:40:40.859+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T17:40:40.860+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T17:40:40.982+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T17:40:40.982+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2925 ms
+2024-09-12T17:40:41.292+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-12T17:40:41.415+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-12T17:40:41.485+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-12T17:40:42.093+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-12T17:40:42.158+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-12T17:40:42.598+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29b4d3e9
+2024-09-12T17:40:42.602+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-12T17:40:44.645+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-12T17:40:44.796+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:40:45.320+01:00  WARN 47720 --- [API REST FORUM] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12T17:40:45.899+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-12T17:40:45.979+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T17:40:46.007+01:00  INFO 47720 --- [API REST FORUM] [restartedMain] c.e.a.ApiRestForumApplication            : Started ApiRestForumApplication in 8.824 seconds (process running for 10.117)
+2024-09-12T17:41:55.366+01:00  INFO 47720 --- [API REST FORUM] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T17:41:55.367+01:00  INFO 47720 --- [API REST FORUM] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T17:41:55.370+01:00  INFO 47720 --- [API REST FORUM] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-12T17:51:55.978+01:00  INFO 47720 --- [API REST FORUM] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12T17:51:55.985+01:00  INFO 47720 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-12T17:51:55.991+01:00  INFO 47720 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
