@@ -26,7 +26,7 @@ public class ForumServiceImpl implements ForumService{
     }
 
     @Override
-    public List<ForumDTO> findAll(ForumDTO forumDTO) {
+    public List<ForumDTO> findAll() {
         return forumRepository.findAll().stream().map(forum -> {
             return forumMapper.toDto(forum);
         }).toList();

@@ -9,7 +9,7 @@ public interface ForumService {
 
     ForumDTO save(ForumDTO forumDTO);
 
-    List<ForumDTO> findAll(ForumDTO forumDTO);
+    List<ForumDTO> findAll();
 
     Optional<ForumDTO> findOne(Long id);
 }
