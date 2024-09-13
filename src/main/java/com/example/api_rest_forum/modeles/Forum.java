@@ -26,7 +26,6 @@ public class Forum implements Serializable {
     @Column(nullable = false)
     private String description;
 
-    @Temporal(TemporalType.DATE)
     private Instant createdDate;
 
     @OneToMany(mappedBy = "forum")

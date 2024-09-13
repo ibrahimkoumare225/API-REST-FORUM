@@ -4,6 +4,7 @@ import com.example.api_rest_forum.modeles.Sujet;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Getter
@@ -11,7 +12,10 @@ import java.util.Date;
 public class MessageDTO {
 
     private Long id;
+
     private String content;
-    private Date createdDate;
+
+    private Instant createdDate;
+
     private Sujet sujet;
 }

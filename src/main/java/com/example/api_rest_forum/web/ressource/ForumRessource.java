@@ -21,16 +21,17 @@ public class ForumRessource {
 
     @PostMapping
     ResponseEntity<ForumDTO> save(@RequestBody ForumDTO forum){
-        log.debug("Rest Request");
+        log.debug("Rest Request to save forum");
         return new ResponseEntity<>(forumService.save(forum), HttpStatus.CREATED);
     }
     @GetMapping
     List<ForumDTO> listForum(){
-
+        log.debug("REST Request to get all forum");
         return forumService.findAll();
     }
     @GetMapping("/{id}")
     ResponseEntity<?>getOneForum(@PathVariable Long id){
+        log.debug("REST Request to get one forum by id,{}",id);
         Optional<ForumDTO> forum = forumService.findOne(id);
         if (forum.isPresent()){
             return new ResponseEntity<>(forum.get(),HttpStatus.OK);

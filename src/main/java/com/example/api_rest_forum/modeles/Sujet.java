@@ -22,7 +22,6 @@ public class Sujet implements Serializable {
     @Column(nullable = false)
     private String title;
 
-    @Temporal(TemporalType.DATE)
     private Instant createdDate;
 
     @Column(unique = true)

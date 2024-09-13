@@ -22,7 +22,6 @@ public class Message implements Serializable {
     @Column(nullable = false)
     private String content;
 
-    @Temporal(TemporalType.DATE)
     private Instant createdDate;
 
     @ManyToOne

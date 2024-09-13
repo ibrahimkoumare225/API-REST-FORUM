@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +24,7 @@ public class MessageServiceImpl implements MessageService {
     public MessageDTO save(MessageDTO messageDTO) {
         log.debug("Saving message {}", messageDTO);
         Message message = messageMapper.toEntity(messageDTO);
+        message.setCreatedDate(Instant.now());
         message = messageRepository.save(message);
         return messageMapper.toDto(message);
     }
