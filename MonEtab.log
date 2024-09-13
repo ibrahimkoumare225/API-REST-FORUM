@@ -1,2 +1,5 @@
 2024-09-13T01:54:48.647+01:00  WARN 50676 --- [API REST FORUM] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30s401ms932µs600ns).
 2024-09-13T08:12:01.974+01:00  WARN 50676 --- [API REST FORUM] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h17m24s280ms888µs).
+2024-09-13T09:37:35.167+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13T09:37:35.209+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-13T09:37:35.219+01:00  INFO 50676 --- [API REST FORUM] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

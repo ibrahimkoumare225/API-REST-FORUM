@@ -2,6 +2,7 @@ package com.example.api_rest_forum.web.ressource;
 
 import com.example.api_rest_forum.services.ForumService;
 import com.example.api_rest_forum.services.dto.ForumDTO;
+import com.example.api_rest_forum.services.dto.MessageDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class ForumRessource {
     ResponseEntity<ForumDTO> save(@RequestBody ForumDTO forum){
         return new ResponseEntity<>(forumService.save(forum), HttpStatus.CREATED);
     }
-    @GetMapping("/")
+    @GetMapping
     List<ForumDTO> listForum(){
         return forumService.findAll();
     }

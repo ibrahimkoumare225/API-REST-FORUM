@@ -15,6 +15,8 @@ public class SujetDTO {
 
     private Long id;
     String title;
+
+
     Date createdDate;
     private String slug;
     private List<Message> messages;

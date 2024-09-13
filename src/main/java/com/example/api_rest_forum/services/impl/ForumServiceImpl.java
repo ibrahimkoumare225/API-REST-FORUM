@@ -6,11 +6,13 @@ import com.example.api_rest_forum.services.ForumService;
 import com.example.api_rest_forum.services.dto.ForumDTO;
 import com.example.api_rest_forum.services.mappers.ForumMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RequiredArgsConstructor
 @Service
 public class ForumServiceImpl implements ForumService{
@@ -20,6 +22,7 @@ public class ForumServiceImpl implements ForumService{
 
     @Override
     public ForumDTO save(ForumDTO forumDTO) {
+        log.debug("Saving forum {}", forumDTO);
         Forum forum = forumMapper.toEntity(forumDTO);
         forum = forumRepository.save(forum);
         return forumMapper.toDto(forum) ;
@@ -27,6 +30,7 @@ public class ForumServiceImpl implements ForumService{
 
     @Override
     public List<ForumDTO> findAll() {
+        log.debug("Finding all forum");
         return forumRepository.findAll().stream().map(forum -> {
             return forumMapper.toDto(forum);
         }).toList();
@@ -34,6 +38,7 @@ public class ForumServiceImpl implements ForumService{
 
     @Override
     public Optional<ForumDTO> findOne(Long id) {
+        log.debug("find one forum by id {}", id);
         return forumRepository.findById(id).map(forum -> {
             return forumMapper.toDto(forum);
         });

@@ -1,4 +1,4 @@
-package com.example.api_rest_forum.web.resource;
+package com.example.api_rest_forum.web.ressource;
 
 import com.example.api_rest_forum.services.SujetService;
 import com.example.api_rest_forum.services.dto.SujetDTO;
@@ -22,8 +22,8 @@ public class SujetResource {
     @PostMapping
     public ResponseEntity<SujetDTO> save(@RequestBody SujetDTO sujetDTO) {
         log.debug("REST Request to save sujet {}", sujetDTO);
-        SujetDTO sujet = sujetService.saveSujet(sujetDTO);
-        return new ResponseEntity<>(sujet, HttpStatus.CREATED);
+
+        return new ResponseEntity<>(sujetService.saveSujet(sujetDTO), HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")

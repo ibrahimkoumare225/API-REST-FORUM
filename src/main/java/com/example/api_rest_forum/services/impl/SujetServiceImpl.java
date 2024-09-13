@@ -37,6 +37,7 @@ public class SujetServiceImpl implements SujetService {
 
     @Override
     public Optional<SujetDTO> findOne(Long id) {
+        log.debug("find one sujet by id {}", id);
         return sujetRepository.findById(id).map(sujetMapper::toDto);
     }
 
