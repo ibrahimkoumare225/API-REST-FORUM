@@ -20,13 +20,11 @@ public class Forum {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JoinColumn(nullable = false, unique = true)
+    @JoinColumn
     private String title;
-
     private String description;
     @Temporal(TemporalType.DATE)
     private Date createdDate;
-
-    @OneToMany(mappedBy = "forum", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
     private List<Sujet> sujets;
 }

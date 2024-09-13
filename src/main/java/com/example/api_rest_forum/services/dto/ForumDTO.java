@@ -12,11 +12,8 @@ import java.util.List;
 public class ForumDTO {
 
     private Long id;
-
     private String title;
-
     private String description;
     private Date createdDate;
-
     private List<Sujet> sujets;
 }
