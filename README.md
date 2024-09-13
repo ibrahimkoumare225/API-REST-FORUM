@@ -19,14 +19,10 @@ Pour  démarrer, vous devez vous assurer d'avoir les éléments suivants install
 •	PostgreSQL( et configurer la base de données (on vous demandera de définir un mot de passe et  un port par défaut le port utilisé est le 5432) ensuite créer une base de données et sélectionner l’utilisateur par défaut postgre ou autre si vous créez un utilisateur.)
 •	Postman (pour tester les points d'API)
 IV-	Utilisation de l'API
-Voici quelques requêtes d'utilisation des principaux points d'API.  Pour le dossier forum :               
-  Ouvrez le fichier ajout de nouveau élément et dans l’URL saisie  localhost:8080/api/forums ensuite sélectionnés la méthode Post
-  Entrer dans body, sélectionner raw puis renseigner les différentes informations du forum 
-  Ouvrez le fichier pour la liste des forums et dans l’URL saisie  localhost:8080/api/forums ensuite sélectionnés la méthode Get
-  Faire de même et sélectionner la méthode Get pour la récupération des détails d’un forum.
-  Pour le dossier sujet : faire les mêmes requêtes que celles de forum en vue de la création d’un nouveau sujet, la liste des sujets et pour la récupération des détails d’un sujet. 
-  Pour le fichier message : Utiliser la méthode Post pour la création d’un nouveau message dans un sujet et utiliser la méthode Get pour lister les messages d’un sujet.
-
+Voici quelques requêtes d'utilisation des principaux points d'API.  
+  Pour la ressource forum : copié cette url pour accéder la ressoure http://localhost:8080/swagger-ui/index.html#/forum-ressource            
+  Pour la ressource sujet :copié cette url pour accéder la ressoure http://localhost:8080/swagger-ui/index.html#/sujet-resource/getAll
+  Pour la ressource message : copié cette url pour accéder la ressoure http://localhost:8080/swagger-ui/index.html#/message-ressource/messages
 V-	Technologies utilisées
 •	Java 17
 •	Spring Boot
