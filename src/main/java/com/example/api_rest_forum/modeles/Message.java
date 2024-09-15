@@ -22,6 +22,9 @@ public class Message implements Serializable {
     @Column(nullable = false)
     private String content;
 
+    @Column(unique = true)
+    private String slug;
+
     private Instant createdDate;
 
     @ManyToOne

@@ -17,5 +17,5 @@ public class MessageDTO {
 
     private Instant createdDate;
 
-    private Sujet sujet;
+    private SujetDTO sujet;
 }

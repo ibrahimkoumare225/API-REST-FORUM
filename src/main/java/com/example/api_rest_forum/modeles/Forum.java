@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -23,6 +24,9 @@ public class Forum implements Serializable {
     @Column(nullable = false)
     private String title;
 
+    @Column(unique = true)
+    private String slug;
+
     @Column(nullable = false)
     private String description;
 
@@ -30,4 +34,6 @@ public class Forum implements Serializable {
 
     @OneToMany(mappedBy = "forum")
     private List<Sujet> sujets;
+
+
 }

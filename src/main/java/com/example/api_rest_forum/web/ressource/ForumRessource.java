@@ -2,22 +2,17 @@ package com.example.api_rest_forum.web.ressource;
 
 import com.example.api_rest_forum.services.ForumService;
 import com.example.api_rest_forum.services.dto.ForumDTO;
-<<<<<<< HEAD
-import com.example.api_rest_forum.services.dto.MessageDTO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-=======
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
->>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
 
 import java.util.List;
 import java.util.Optional;
@@ -30,33 +25,49 @@ public class ForumRessource {
     private final ForumService forumService;
 
     @PostMapping
-    ResponseEntity<ForumDTO> save(@RequestBody ForumDTO forum){
-<<<<<<< HEAD
-        log.debug("Rest Request to save forum");
-        return new ResponseEntity<>(forumService.save(forum), HttpStatus.CREATED);
+    @ApiResponse(responseCode = "201", description= "Request to save forum")
+    @Operation(summary = "forum new save", description = "this endpoint allow to save forum")
+    public ResponseEntity<ForumDTO> saveForum(@RequestBody ForumDTO forumDTO){
+        log.debug("REST Request to save forum : {}", forumDTO);
+        return new ResponseEntity<>(forumService.save(forumDTO), HttpStatus.CREATED);
     }
-    @GetMapping
-    List<ForumDTO> listForum(){
-        log.debug("REST Request to get all forum");
-=======
-        return new ResponseEntity<>(forumService.save(forum), HttpStatus.CREATED);
-    }
-    @GetMapping("/")
-    List<ForumDTO> listForum(){
->>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
-        return forumService.findAll();
-    }
+
     @GetMapping("/{id}")
-    ResponseEntity<?>getOneForum(@PathVariable Long id){
-<<<<<<< HEAD
-        log.debug("REST Request to get one forum by id,{}",id);
-=======
->>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
-        Optional<ForumDTO> forum = forumService.findOne(id);
-        if (forum.isPresent()){
-            return new ResponseEntity<>(forum.get(),HttpStatus.OK);
-        }else{
-            return new ResponseEntity<>("Foum not found",HttpStatus.NOT_FOUND);
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Request to get forum"),
+            @ApiResponse(responseCode = "404", description = "forum not found", content = @Content(schema = @Schema(implementation = String.class)))
+    })
+    @Operation(summary = "get one by id", description = "this endpoint allow to get one id")
+    public ResponseEntity<?> getOneById(@PathVariable Long id){
+        log.debug("REST Request to get by id forum : {}", id);
+        Optional<ForumDTO> forumDTO = forumService.finOneById(id);
+        if (forumDTO.isPresent()){
+            return new ResponseEntity<>(forumDTO.get(),HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>("forum not found",HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/slug/{slug}")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Request to get forum by slug"),
+            @ApiResponse(responseCode = "404", description = "forum not found", content = @Content(schema = @Schema(implementation = String.class)))
+    })
+    @Operation(summary = "get one by slug", description = "this endpoint allow to get one slug")
+    public ResponseEntity<?> getOneBySlug(@PathVariable String slug){
+        log.debug("REST Request to get by slug forum : {}", slug);
+        Optional<ForumDTO> forumDTO = forumService.finOneBySlug(slug);
+        if (forumDTO.isPresent()){
+            return new ResponseEntity<>(forumDTO.get(),HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>("forum not found",HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping
+    @Operation(summary = "get all forum", description = "this endpoint allow to get all forum")
+    public List<ForumDTO> getAll(){
+        log.debug("REST Request to get all forum");
+        return forumService.findAll();
     }
 }

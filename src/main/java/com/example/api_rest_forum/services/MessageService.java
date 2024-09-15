@@ -6,9 +6,14 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MessageService {
-   MessageDTO save(MessageDTO messageDTO);
+
+    MessageDTO saveMessageById(MessageDTO messageDTO, Long id);
+
+    MessageDTO saveMessageBySlug(MessageDTO messageDTO, String slug);
 
     List<MessageDTO> findAll();
 
-    Optional<MessageDTO> findOne(Long id);
+    List<MessageDTO> getAllMessageByIdSubject(Long id);
+
+    List<MessageDTO> getAllMessageBySlugSubject(String slug);
 }

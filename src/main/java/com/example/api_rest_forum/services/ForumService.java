@@ -7,9 +7,11 @@ import java.util.Optional;
 
 public interface ForumService {
 
-    ForumDTO save(ForumDTO forumDTO);
+    ForumDTO save (ForumDTO forumDTO);
+
+
+    Optional<ForumDTO> finOneById(Long id);
+    Optional<ForumDTO> finOneBySlug(String slug);
 
     List<ForumDTO> findAll();
-
-    Optional<ForumDTO> findOne(Long id);
 }

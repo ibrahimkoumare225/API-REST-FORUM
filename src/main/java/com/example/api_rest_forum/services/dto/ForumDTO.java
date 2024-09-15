@@ -1,6 +1,7 @@
 package com.example.api_rest_forum.services.dto;
 
 import com.example.api_rest_forum.modeles.Sujet;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,9 +17,12 @@ public class ForumDTO {
 
     private String title;
 
+    private String slug;
+
     private String description;
 
     private Instant createdDate;
 
-    private List<Sujet> sujets;
+    @JsonIgnore
+    private List<SujetDTO> sujets;
 }

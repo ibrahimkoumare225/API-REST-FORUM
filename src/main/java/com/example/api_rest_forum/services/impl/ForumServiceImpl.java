@@ -5,6 +5,7 @@ import com.example.api_rest_forum.repository.ForumRepository;
 import com.example.api_rest_forum.services.ForumService;
 import com.example.api_rest_forum.services.dto.ForumDTO;
 import com.example.api_rest_forum.services.mappers.ForumMapper;
+import com.example.api_rest_forum.services.utils.SlugifyUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,36 +17,43 @@ import java.util.Optional;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class ForumServiceImpl implements ForumService{
+public class ForumServiceImpl implements ForumService {
 
     private final ForumRepository forumRepository;
     private final ForumMapper forumMapper;
 
     @Override
     public ForumDTO save(ForumDTO forumDTO) {
-        log.debug("Saving forum {}", forumDTO);
+        log.debug("Request to save Forum : {}", forumDTO);
         Forum forum = forumMapper.toEntity(forumDTO);
-        forum.setCreatedDate(Instant.now());
-        forum = forumRepository.save(forum);
-        return forumMapper.toDto(forum) ;
+        forum.setSlug(SlugifyUtils.generate(forum.getTitle()));
+        Forum saveForum = forumRepository.save(forum);
+        return forumMapper.toDto(saveForum);
+    }
+
+
+    @Override
+    public Optional<ForumDTO> finOneById(Long id) {
+        log.debug("Request to get Forum by id : {}", id);
+        return forumRepository.findById(id).map(forum -> {
+            return forumMapper.toDto(forum);
+        });
+
+    }
+
+    @Override
+    public Optional<ForumDTO> finOneBySlug(String slug) {
+        log.debug("Request to get Forum by slug : {}", slug);
+        return forumRepository.findBySlug(slug).map(forum -> {
+            return forumMapper.toDto(forum);
+        });
     }
 
     @Override
     public List<ForumDTO> findAll() {
-<<<<<<< HEAD
-        log.debug("Finding all forum");
-=======
->>>>>>> 5701f85 (Mise en place de l'Api Rest pour forum)
+        log.debug("Request to get all Forum");
         return forumRepository.findAll().stream().map(forum -> {
             return forumMapper.toDto(forum);
         }).toList();
-    }
-
-    @Override
-    public Optional<ForumDTO> findOne(Long id) {
-        log.debug("find one forum by id {}", id);
-        return forumRepository.findById(id).map(forum -> {
-            return forumMapper.toDto(forum);
-        });
     }
 }

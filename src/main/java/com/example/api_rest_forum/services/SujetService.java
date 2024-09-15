@@ -7,13 +7,18 @@ import java.util.Optional;
 
 public interface SujetService {
 
-    SujetDTO save(SujetDTO sujetDTO);
+
+    SujetDTO createByIdForum(SujetDTO subjectDTO,Long id);
+
+    SujetDTO createBySlugForum(SujetDTO subjectDTO,String slug);
 
     List<SujetDTO> findAll();
 
-    Optional<SujetDTO> findOne(Long id);
+    Optional<SujetDTO> findById(Long id);
 
-    SujetDTO saveSujet(SujetDTO sujetDTO);
+    Optional<SujetDTO> findBySlug(String slug);
 
-    List<SujetDTO> findByForumId(Long forumId);
+    List<SujetDTO> findByForumId(Long id);
+
+    List<SujetDTO> findByForumSlug(String slug);
 }
