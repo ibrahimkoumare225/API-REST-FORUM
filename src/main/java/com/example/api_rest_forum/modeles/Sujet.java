@@ -17,13 +17,12 @@ public class Sujet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    String title;
-    @Temporal(TemporalType.DATE)
-    Date createdDate;
-
-    @OneToMany(mappedBy = "sujet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private String title;
+    private Date createdDate;
+    @Column(unique = true)
+    private String slug;
+    @OneToMany
     private List<Message> messages;
-
     @ManyToOne
     @JoinColumn(name = "forum_id")
     private Forum forum;

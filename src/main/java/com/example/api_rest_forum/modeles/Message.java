@@ -19,7 +19,6 @@ public class Message {
     private String content;
     @Temporal(TemporalType.DATE)
     private Date createdDate;
-
     @ManyToOne
     @JoinColumn(name = "sujet_id")
     private Sujet sujet;
