@@ -1,9 +1,7 @@
 package com.example.api_rest_forum.web.ressource;
 
 import com.example.api_rest_forum.services.MessageService;
-import com.example.api_rest_forum.services.dto.ForumDTO;
 import com.example.api_rest_forum.services.dto.MessageDTO;
-import com.example.api_rest_forum.services.dto.SujetDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -16,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -31,7 +28,7 @@ public class MessageRessource {
     @Operation(summary = "message new save", description = "this endpoint allow to save message")
     public ResponseEntity<MessageDTO> saveMessageById(@RequestBody MessageDTO messageDTO, @PathVariable Long id){
         log.debug("REST Request to save by id {}", messageDTO);
-        return new ResponseEntity<>(messageService.saveMessageById(messageDTO, id), HttpStatus.CREATED);
+        return new ResponseEntity<>(messageService.saveMessageByIdSubject(messageDTO, id), HttpStatus.CREATED);
     }
 
     @PostMapping("/slug/{slug}")

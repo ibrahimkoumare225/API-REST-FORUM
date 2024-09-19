@@ -2,6 +2,7 @@ package com.example.api_rest_forum.services.dto;
 
 import com.example.api_rest_forum.modeles.Sujet;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class ForumDTO {
 
     private Long id;

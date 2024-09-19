@@ -30,7 +30,7 @@ public class MessageServiceImpl implements MessageService {
     private final SujetService sujetService;
 
     @Override
-    public MessageDTO saveMessageById(MessageDTO messageDTO, Long id) {
+    public MessageDTO saveMessageByIdSubject(MessageDTO messageDTO, Long id) {
         log.debug("Request to save by id: {}", messageDTO);
 
         Optional<SujetDTO> subjectDTO = sujetService.findById(id);
